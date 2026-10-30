@@ -28,3 +28,11 @@ We use industry-standard encryption (including HTTPS/SSL) to protect your data i
 
 6. Contact Us
 If you have questions about this privacy policy or your data, please contact us at: [Your Support Email Address]
+
+## Delete your data
+
+BrutalMaxer keeps your workouts, programs and bodyweight on your phone only. We never receive them.
+
+**To delete your workout data:** in BrutalMaxer go to Settings › Backups and delete any backups, then uninstall the app (or clear its storage in Android Settings › Apps › BrutalMaxer › Storage › Clear storage). Data you chose to sync to Apple Health or Health Connect stays there; delete it in that app.
+
+**To delete your purchase record:** email Kyle@motionpotion.studio with the subject "Delete my BrutalMaxer data" and the email on your Google Play or App Store receipt. We delete your RevenueCat purchase record (an anonymous app user ID and your purchase history) within 30 days. Google Play and Apple keep their own receipts under their policies. If you delete it, restoring Pro later needs your store account.
