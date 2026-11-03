@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BrutalMaxer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="BrutalMaxer is a no-fluff workout tracker. It picks your next weight from how your sets felt, logs a set in one tap, and keeps every rep on your phone.">
+<meta property="og:title" content="BrutalMaxer: All gains, no bloat">
+<meta property="og:description" content="A no-fluff workout tracker for iPhone and Android. 15 programs, next-workout targets from how your sets felt, PRs and 3D demos. No account, no ads.">
+<meta property="og:image" content="https://nerdlykyle.github.io/brutalmaxer/assets/og.jpg">
+<meta property="og:url" content="https://nerdlykyle.github.io/brutalmaxer/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nerdlykyle.github.io/brutalmaxer/">
+<meta name="theme-color" content="#818CF8">
+<meta name="apple-itunes-app" content="app-id=6761445068">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+  document.documentElement.classList.add('js');
+</script>
+</head>
+<body>
+
+<main id="top">
+  <!-- HERO: the ads' indigo paper poster -->
+  <section class="hero" data-v="a" aria-labelledby="hero-title">
+    <div class="hero__in">
+        <h1 class="mark" id="hero-title">
+          <span class="sr-only">BrutalMaxer Workout Tracker</span>
+          <svg class="mark__plate" viewBox="7.5 7.5 185 185" aria-hidden="true" focusable="false">
+            <circle class="ghost ghost--2" cx="100" cy="100" r="88"/>
+            <circle class="ghost ghost--1" cx="100" cy="100" r="88"/>
+            <g class="disc"><circle cx="100" cy="100" r="88"/><circle class="hole" cx="100" cy="100" r="24"/></g>
+          </svg>
+          <svg class="mark__word" viewBox="46.0 -700.0 3498.0 1878.8" aria-hidden="true" focusable="false"><path class="w1" d="M46.0 0.0V-116.0H138.0V-584.0H46.0V-700.0H406.0Q470.0 -700.0 517.5 -678.5Q565.0 -657.0 591.5 -617.5Q618.0 -578.0 618.0 -523.0V-513.0Q618.0 -465.0 600.0 -434.5Q582.0 -404.0 557.5 -387.5Q533.0 -371.0 511.0 -364.0V-346.0Q533.0 -340.0 559.0 -323.5Q585.0 -307.0 603.5 -276.0Q622.0 -245.0 622.0 -195.0V-185.0Q622.0 -127.0 595.0 -85.5Q568.0 -44.0 520.5 -22.0Q473.0 0.0 410.0 0.0ZM270.0 -120.0H394.0Q437.0 -120.0 463.5 -141.0Q490.0 -162.0 490.0 -201.0V-211.0Q490.0 -250.0 464.0 -271.0Q438.0 -292.0 394.0 -292.0H270.0ZM270.0 -412.0H392.0Q433.0 -412.0 459.5 -433.0Q486.0 -454.0 486.0 -491.0V-501.0Q486.0 -539.0 460.0 -559.5Q434.0 -580.0 392.0 -580.0H270.0ZM710.0 0.0V-700.0H1014.0Q1080.0 -700.0 1129.0 -677.0Q1178.0 -654.0 1205.0 -612.0Q1232.0 -570.0 1232.0 -513.0V-501.0Q1232.0 -438.0 1202.0 -399.0Q1172.0 -360.0 1128.0 -342.0V-324.0Q1168.0 -322.0 1190.0 -296.5Q1212.0 -271.0 1212.0 -229.0V0.0H1080.0V-210.0Q1080.0 -234.0 1067.5 -249.0Q1055.0 -264.0 1026.0 -264.0H842.0V0.0ZM842.0 -384.0H1000.0Q1047.0 -384.0 1073.5 -409.5Q1100.0 -435.0 1100.0 -477.0V-487.0Q1100.0 -529.0 1074.0 -554.5Q1048.0 -580.0 1000.0 -580.0H842.0ZM1592.0 14.0Q1506.0 14.0 1444.5 -17.5Q1383.0 -49.0 1350.5 -107.5Q1318.0 -166.0 1318.0 -246.0V-700.0H1450.0V-242.0Q1450.0 -178.0 1486.5 -141.0Q1523.0 -104.0 1592.0 -104.0Q1661.0 -104.0 1697.5 -141.0Q1734.0 -178.0 1734.0 -242.0V-700.0H1866.0V-246.0Q1866.0 -166.0 1833.5 -107.5Q1801.0 -49.0 1739.5 -17.5Q1678.0 14.0 1592.0 14.0ZM2136.0 0.0V-580.0H1932.0V-700.0H2472.0V-580.0H2268.0V0.0ZM2430.0 0.0 2614.0 -700.0H2844.0L3028.0 0.0H2892.0L2854.0 -154.0H2604.0L2566.0 0.0ZM2635.0 -276.0H2823.0L2738.0 -617.0H2720.0ZM3092.0 0.0V-700.0H3224.0V-120.0H3544.0V0.0Z"/><path class="w2" d="M46.0 775.8555133079849V0.0H317.5494296577947L451.6615969581749 676.1026615969582H471.61216730038024L605.7243346007606 0.0H877.2737642585553V775.8555133079849H735.4030418250952V107.51140684410655H715.4524714828897L582.4486692015209 775.8555133079849H340.8250950570342L207.8212927756654 107.51140684410655H187.8707224334601V775.8555133079849ZM948.2091254752852 775.8555133079849 1152.148288973384 0.0H1407.0722433460078L1611.0114068441067 775.8555133079849H1460.2737642585553L1418.1558935361218 605.1673003802282H1141.06463878327L1098.9467680608366 775.8555133079849ZM1175.4239543726237 469.9467680608366H1383.7965779467681L1289.5855513307986 91.99429657794678H1269.6349809885933ZM1633.1787072243346 775.8555133079849 1860.3935361216732 384.6026615969582 1635.3954372623575 0.0H1801.6501901140687L1955.7129277566542 280.416349809886H1975.6634980988595L2129.726235741445 0.0H2295.9809885931563L2070.9828897338402 384.6026615969582L2298.1977186311788 775.8555133079849H2131.942965779468L1975.6634980988595 488.7889733840305H1955.7129277566542L1799.4334600760458 775.8555133079849ZM2373.5665399239547 775.8555133079849V0.0H2872.3307984790877V133.00380228136885H2519.8707224334603V318.1007604562738H2841.296577946768V451.10456273764265H2519.8707224334603V642.851711026616H2878.9809885931563V775.8555133079849ZM2965.433460076046 775.8555133079849V0.0H3302.3764258555134Q3375.528517110266 0.0 3429.838403041825 25.49239543726236Q3484.1482889733843 50.98479087452472 3514.074144486692 97.53612167300383Q3544.0 144.08745247148295 3544.0 207.2642585551331V220.56463878326997Q3544.0 290.39163498098867 3510.749049429658 333.6178707224335Q3477.4980988593156 376.8441064638784 3428.7300380228135 396.7946768060837V416.745247148289Q3473.06463878327 418.96197718631186 3497.4486692015207 447.22528517110277Q3521.832699619772 475.4885931558936 3521.832699619772 522.0399239543727V775.8555133079849H3375.528517110266V543.0988593155894Q3375.528517110266 516.4980988593156 3361.6739543726235 499.87262357414454Q3347.819391634981 483.24714828897345 3315.6768060836503 483.24714828897345H3111.7376425855514V775.8555133079849ZM3111.7376425855514 350.2433460076046H3286.8593155893536Q3338.95247148289 350.2433460076046 3368.324144486692 321.98003802281374Q3397.6958174904944 293.7167300380229 3397.6958174904944 247.16539923954383V236.08174904942973Q3397.6958174904944 189.53041825095067 3368.8783269961978 161.26711026615976Q3340.060836501901 133.00380228136885 3286.8593155893536 133.00380228136885H3111.7376425855514Z"/><path class="w3" d="M78.98147940285105 1174.8729114447005 46.0 888.2481499675426H79.76675272196655L101.36176899764283 1100.271946128728Q102.14704231675833 1108.9099526389984 102.93231563587383 1118.1369141386056Q103.71758895498934 1127.3638756382127 104.30654394432597 1135.6092454889254Q104.8954989336626 1143.8546153396383 104.8954989336626 1149.3515285734468Q105.6807722527781 1143.8546153396383 106.26972724211471 1135.6092454889254Q106.85868223145133 1127.3638756382127 107.8402738803457 1118.1369141386056Q108.82186552924009 1108.9099526389984 109.99977550791334 1100.271946128728L136.6990683578404 888.2481499675426H173.21427769671118L197.55775058929171 1100.271946128728Q198.73566056796497 1108.9099526389984 199.71725221685935 1118.1369141386056Q200.69884386575373 1127.3638756382127 201.68043551464808 1135.6092454889254Q202.66202716354246 1143.8546153396383 203.0546638231002 1149.3515285734468Q203.44730048265797 1143.8546153396383 204.0362554719946 1135.6092454889254Q204.62521046133122 1127.3638756382127 205.6068021102256 1118.1369141386056Q206.58839375911998 1108.9099526389984 207.37366707823548 1100.271946128728L229.75395667302726 888.2481499675426H261.95016275676284L228.18341003479625 1174.8729114447005H183.81546750477045L159.47199461218992 958.9227486879378Q158.6867212930744 949.8921055181095 157.70512964418003 941.2540990078389Q156.72353799528565 932.6160924975684 155.93826467617015 925.1559959659712Q155.15299135705465 917.6958994343739 154.76035469749692 912.9842595196809Q154.36771803793917 917.6958994343739 153.3861263890448 925.1559959659712Q152.4045347401504 932.6160924975684 151.6192614210349 941.2540990078389Q150.8339881019194 949.8921055181095 149.65607812324615 958.9227486879378L123.34942193287685 1174.8729114447005ZM389.55707711303177 1178.0140047211626Q363.6430575822202 1178.0140047211626 344.7964979234482 1168.1980882322187Q325.9499382646762 1158.382171743275 315.54506678639575 1139.7319304142818Q305.1401953081154 1121.0816890852886 305.1401953081154 1095.5603062140349V1038.2353539186033Q305.1401953081154 1012.3213343877918 315.54506678639575 993.8674113885775Q325.9499382646762 975.4134883893632 344.7964979234482 965.5975719004196Q363.6430575822202 955.7816554114758 389.55707711303177 955.7816554114758Q415.4710966438433 955.7816554114758 434.3176563026153 965.5975719004196Q453.1642159613873 975.4134883893632 463.5690874396677 993.8674113885775Q473.97395891794815 1012.3213343877918 473.97395891794815 1037.8427172590457V1095.5603062140349Q473.97395891794815 1121.0816890852886 463.5690874396677 1139.7319304142818Q453.1642159613873 1158.382171743275 434.3176563026153 1168.1980882322187Q415.4710966438433 1178.0140047211626 389.55707711303177 1178.0140047211626ZM389.55707711303177 1146.6030719565424Q412.722640026939 1146.6030719565424 425.6796497923448 1133.6460621911367Q438.6366595577506 1120.689052425731 438.6366595577506 1095.5603062140349V1038.2353539186033Q438.6366595577506 1013.1066077069073 425.6796497923448 1000.1495979415015Q412.722640026939 987.1925881760958 389.55707711303177 987.1925881760958Q366.7841508586822 987.1925881760958 353.6308227634976 1000.1495979415015Q340.47749466831294 1013.1066077069073 340.47749466831294 1038.2353539186033V1095.5603062140349Q340.47749466831294 1120.689052425731 353.6308227634976 1133.6460621911367Q366.7841508586822 1146.6030719565424 389.55707711303177 1146.6030719565424ZM550.9307441912673 1174.8729114447005V958.9227486879378H585.4827702323494V1000.1495979415015H593.728140083062L582.3416769558874 1025.6709808127553Q582.3416769558874 990.7263181121156 597.4581883488607 972.8613501022379Q612.5746997418341 954.9963820923602 642.4150858682232 954.9963820923602Q676.5744752497475 954.9963820923602 696.7952632169715 976.3950800382577Q717.0160511841957 997.793777984155 717.0160511841957 1034.3089873230258V1047.2659970884315H681.6787518239983V1037.4500805994878Q681.6787518239983 1011.928697728234 669.3106970479291 998.3827329734917Q656.9426422718599 984.8367682187493 634.1697160175104 984.8367682187493Q611.7894264227186 984.8367682187493 599.0287349870918 998.5790513032705Q586.2680435514649 1012.3213343877918 586.2680435514649 1037.4500805994878V1174.8729114447005ZM780.2305533729935 1174.8729114447005V888.2481499675426H815.5678527331911V1048.0512704075472H857.1873386463126L920.0092041755527 958.9227486879378H960.450780110001L887.8129980918172 1061.7935534920684L961.6286900886743 1174.8729114447005H920.4018408351105L857.5799753058703 1078.6769298530517H815.5678527331911V1174.8729114447005ZM1096.3030643169827 1178.0140047211626Q1070.3890447861713 1178.0140047211626 1051.5424851273992 1168.1980882322187Q1032.6959254686271 1158.382171743275 1022.2910539903468 1139.7319304142818Q1011.8861825120664 1121.0816890852886 1011.8861825120664 1095.5603062140349V1038.2353539186033Q1011.8861825120664 1012.3213343877918 1022.2910539903468 993.8674113885775Q1032.6959254686271 975.4134883893632 1051.5424851273992 965.5975719004196Q1070.3890447861713 955.7816554114758 1096.3030643169827 955.7816554114758Q1122.2170838477944 955.7816554114758 1141.0636435065662 965.5975719004196Q1159.9102031653383 975.4134883893632 1170.3150746436186 993.8674113885775Q1180.719946121899 1012.3213343877918 1180.719946121899 1037.8427172590457V1095.5603062140349Q1180.719946121899 1121.0816890852886 1170.3150746436186 1139.7319304142818Q1159.9102031653383 1158.382171743275 1141.0636435065662 1168.1980882322187Q1122.2170838477944 1178.0140047211626 1096.3030643169827 1178.0140047211626ZM1096.3030643169827 1146.6030719565424Q1119.46862723089 1146.6030719565424 1132.425636996296 1133.6460621911367Q1145.3826467617016 1120.689052425731 1145.3826467617016 1095.5603062140349V1038.2353539186033Q1145.3826467617016 1013.1066077069073 1132.425636996296 1000.1495979415015Q1119.46862723089 987.1925881760958 1096.3030643169827 987.1925881760958Q1073.5301380626333 987.1925881760958 1060.3768099674485 1000.1495979415015Q1047.2234818722638 1013.1066077069073 1047.2234818722638 1038.2353539186033V1095.5603062140349Q1047.2234818722638 1120.689052425731 1060.3768099674485 1133.6460621911367Q1073.5301380626333 1146.6030719565424 1096.3030643169827 1146.6030719565424ZM1331.4924233920756 1178.799278040278Q1294.1919407340893 1178.799278040278 1271.8116511392973 1156.6153067752653Q1249.4313615445055 1134.4313355102522 1249.4313615445055 1096.3455795331504V958.9227486879378H1284.7686609047032V1096.3455795331504Q1284.7686609047032 1120.689052425731 1297.3330340105513 1134.2350171804733Q1309.8974071163993 1147.7809819352158 1331.4924233920756 1147.7809819352158Q1353.4800763273095 1147.7809819352158 1366.2407677629362 1134.2350171804733Q1379.0014591985632 1120.689052425731 1379.0014591985632 1096.3455795331504V958.9227486879378H1414.338758558761V1096.3455795331504Q1414.338758558761 1134.4313355102522 1391.5658323044113 1156.6153067752653Q1368.792906050062 1178.799278040278 1331.4924233920756 1178.799278040278ZM1591.0252553597486 1174.8729114447005Q1563.1480525311483 1174.8729114447005 1547.6389044786172 1159.952718381506Q1532.129756426086 1145.0325253183114 1532.129756426086 1117.9405958088266V991.1189547716733H1471.2710741946346V958.9227486879378H1532.129756426086V898.0640664564864H1567.4670557862835V958.9227486879378H1653.8471208889887V991.1189547716733H1567.4670557862835V1117.9405958088266Q1567.4670557862835 1142.6767053609651 1591.0252553597486 1142.6767053609651H1649.9207542934112V1174.8729114447005ZM2020.9623975754855 1174.8729114447005V920.0517193917204H1942.4350656639353V887.8555133079849H2134.827028847233V920.0517193917204H2056.299696935683V1174.8729114447005ZM2200.0047143338197 1174.8729114447005V958.9227486879378H2234.556740374902V1000.1495979415015H2242.8021102256143L2231.41564709844 1025.6709808127553Q2231.41564709844 990.7263181121156 2246.532158491413 972.8613501022379Q2261.6486698843864 954.9963820923602 2291.4890560107756 954.9963820923602Q2325.6484453923 954.9963820923602 2345.869233359524 976.3950800382577Q2366.0900213267482 997.793777984155 2366.0900213267482 1034.3089873230258V1047.2659970884315H2330.752721966551V1037.4500805994878Q2330.752721966551 1011.928697728234 2318.3846671904817 998.3827329734917Q2306.0166124144125 984.8367682187493 2283.2436861600627 984.8367682187493Q2260.863396565271 984.8367682187493 2248.102705129644 998.5790513032705Q2235.342013694017 1012.3213343877918 2235.342013694017 1037.4500805994878V1174.8729114447005ZM2490.9484790661127 1178.799278040278Q2456.7890896845884 1178.799278040278 2437.157256706701 1161.3269466899583Q2417.5254237288136 1143.8546153396383 2417.5254237288136 1114.014229213249Q2417.5254237288136 1083.7812064273023 2437.157256706701 1066.5051934067615Q2456.7890896845884 1049.2291803862204 2490.1632057469974 1049.2291803862204H2556.911437871815V1027.6341641105441Q2556.911437871815 1007.6096944730988 2544.9360197553033 996.8121863352607Q2532.960601638792 986.0146781974225 2510.972948703558 986.0146781974225Q2491.7337523852284 986.0146781974225 2478.7767426198225 994.0637297183564Q2465.8197328544165 1002.1127812392903 2463.856549556628 1015.8550643238116H2428.51925019643Q2432.05298013245 987.9778614952113 2454.8259063868 971.4871217937857Q2477.5988326411493 954.9963820923602 2511.7582220226736 954.9963820923602Q2549.05870468066 954.9963820923602 2570.653720956336 974.2355784106901Q2592.2487372320124 993.4747747290198 2592.2487372320124 1026.4562541318708V1174.8729114447005H2557.6967111909303V1133.6460621911367H2551.807161297564L2557.6967111909303 1127.7565122977705Q2557.6967111909303 1151.3147118712354 2539.439106521495 1165.0569949557566Q2521.1815018520597 1178.799278040278 2490.9484790661127 1178.799278040278ZM2499.5864855763834 1150.9220752116778Q2524.715231788079 1150.9220752116778 2540.813334829947 1138.3577021058297Q2556.911437871815 1125.7933289999817 2556.911437871815 1106.1614960220943V1075.5358365765896H2490.9484790661127Q2473.279829386014 1075.5358365765896 2463.0712762375124 1085.3517530655336Q2452.862723089011 1095.1676695544772 2452.862723089011 1112.0510459154605Q2452.862723089011 1130.112332255117 2465.23077786508 1140.5172037333973Q2477.5988326411493 1150.9220752116778 2499.5864855763834 1150.9220752116778ZM2746.947581097766 1178.799278040278Q2721.0335615669546 1178.799278040278 2701.598046918846 1168.9833615513344Q2682.1625322707373 1159.1674450623905 2671.561342462678 1140.5172037333973Q2660.9601526546185 1121.8669624044041 2660.9601526546185 1096.3455795331504V1037.4500805994878Q2660.9601526546185 1011.5360610686763 2671.561342462678 993.082138069462Q2682.1625322707373 974.6282150702477 2701.598046918846 964.812298581304Q2721.0335615669546 954.9963820923602 2746.947581097766 954.9963820923602Q2784.2480637557524 954.9963820923602 2807.0209900101017 975.0208517298056Q2829.7939162644516 995.0453213672508 2830.9718262431247 1029.5973474083328H2795.6345268829273Q2794.4566169042537 1008.787604451772 2781.695925468627 997.5974596543762Q2768.935234033 986.4073148569803 2746.947581097766 986.4073148569803Q2723.782018183859 986.4073148569803 2710.0397350993376 999.5606429521649Q2696.2974520148164 1012.7139710473496 2696.2974520148164 1037.0574439399302V1096.3455795331504Q2696.2974520148164 1120.689052425731 2710.0397350993376 1134.0386988506943Q2723.782018183859 1147.388345275658 2746.947581097766 1147.388345275658Q2768.935234033 1147.388345275658 2781.695925468627 1136.0018821484832Q2794.4566169042537 1124.6154190213085 2795.6345268829273 1104.1983127243054H2830.9718262431247Q2829.7939162644516 1138.7503387653876 2807.0209900101017 1158.7748084028328Q2784.2480637557524 1178.799278040278 2746.947581097766 1178.799278040278ZM2900.4685149848465 1174.8729114447005V888.2481499675426H2935.805814345044V1048.0512704075472H2977.4253002581654L3040.2471657874057 958.9227486879378H3080.688741721854L3008.0509597036703 1061.7935534920684L3081.866651700527 1174.8729114447005H3040.6398024469636L2977.8179369177233 1078.6769298530517H2935.805814345044V1174.8729114447005ZM3216.5410259288356 1178.799278040278Q3191.019643057582 1178.799278040278 3171.976765069031 1168.5907248917765Q3152.93388708048 1158.382171743275 3142.5290156021993 1139.7319304142818Q3132.124144123919 1121.0816890852886 3132.124144123919 1096.3455795331504V1037.4500805994878Q3132.124144123919 1012.3213343877918 3142.5290156021993 993.8674113885775Q3152.93388708048 975.4134883893632 3171.976765069031 965.2049352408617Q3191.019643057582 954.9963820923602 3216.5410259288356 954.9963820923602Q3242.0624088000895 954.9963820923602 3261.10528678864 965.2049352408617Q3280.148164777191 975.4134883893632 3290.553036255472 993.8674113885775Q3300.957907733752 1012.3213343877918 3300.957907733752 1037.4500805994878V1075.5358365765896H3166.676170165001V1096.3455795331504Q3166.676170165001 1121.8669624044041 3179.633179930407 1135.4129271591464Q3192.590189695813 1148.958891913889 3216.5410259288356 1148.958891913889Q3236.9581322258387 1148.958891913889 3249.5225053316867 1141.6951137120705Q3262.086878437535 1134.4313355102522 3264.835335054439 1119.9037791066155H3300.1726344146364Q3296.6389044786165 1146.9957086161003 3273.669659894488 1162.8974933281893Q3250.70041531036 1178.799278040278 3216.5410259288356 1178.799278040278ZM3266.40588169267 1051.9776370031245V1037.4500805994878Q3266.40588169267 1011.928697728234 3253.645190257043 998.1864146437129Q3240.884498821416 984.4441315591915 3216.5410259288356 984.4441315591915Q3192.590189695813 984.4441315591915 3179.633179930407 998.1864146437129Q3166.676170165001 1011.928697728234 3166.676170165001 1037.4500805994878V1048.8365437266625H3269.154338309574ZM3377.914693007071 1174.8729114447005V958.9227486879378H3412.466719048153V1000.1495979415015H3420.7120888988657L3409.325625771691 1025.6709808127553Q3409.325625771691 990.7263181121156 3424.4421371646645 972.8613501022379Q3439.5586485576378 954.9963820923602 3469.399034684027 954.9963820923602Q3503.558424065551 954.9963820923602 3523.7792120327754 976.3950800382577Q3543.9999999999995 997.793777984155 3543.9999999999995 1034.3089873230258V1047.2659970884315H3508.662700639802V1037.4500805994878Q3508.662700639802 1011.928697728234 3496.294645863733 998.3827329734917Q3483.926591087664 984.8367682187493 3461.153664833314 984.8367682187493Q3438.7733752385225 984.8367682187493 3426.0126838028955 998.5790513032705Q3413.2519923672685 1012.3213343877918 3413.2519923672685 1037.4500805994878V1174.8729114447005Z"/></svg>
+        </h1>
+        <p class="hero__tag"><span class="t1">All gains,</span> <span class="t2">no bloat.</span></p>
+        <p class="hero__lede">The no-fluff workout tracker. It sets your next weight from how your sets felt, and every rep stays on your phone.</p>
+        <div class="stores">
+          <a class="store" id="appstore-link" href="https://apps.apple.com/us/app/brutalmaxer-workout-tracker/id6761445068"><small>Download on the</small><b>App Store</b></a>
+          <a class="store" id="play-link" href="https://play.google.com/store/apps/details?id=com.kyleparsons.brutalmaxer"><small>Get it on</small><b>Google Play</b></a>
+        </div>
+        <p class="hero__fine">Free to start · Pro <span data-price-now>$2.99</span> once · No account, no ads</p>
+      <figure class="phone phone--hero" id="hero-phone">
+        <video id="hero-video" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="BrutalMaxer 37-second tour: pick a program, get your next target, log, rate, 3D demos, muscle focus and progress"></video>
+        <div class="phone__bar">
+          <button class="sound" id="hero-sound" type="button">Sound on</button>
+          <span class="phone__hint" aria-hidden="true">Drag to spin</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TRY IT: live pieces of the app in its own UI -->
+  <section class="try" id="try" aria-labelledby="try-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="try-title" data-flash>Try it. No download.</h2>
+        <p class="sec-note">Six live pieces of the app. Tap, drag, type.</p>
+      </div>
+
+      <div class="grid">
+        <!-- 1. Next target: today's sets → how it felt → next workout's target -->
+        <article class="card card--wide" aria-labelledby="t-title">
+          <header class="card__head">
+            <p class="eyebrow">Next target</p>
+            <h3 class="card__title" id="t-title">Rate the sets. Next workout, it sets your weight.</h3>
+          </header>
+          <div class="app sim" id="sim">
+            <!-- step 1: today -->
+            <div class="sim__step" id="sim-today">
+              <div class="sim__when"><span class="sim__day">Today</span><span>W7 · Upper 1</span></div>
+              <div class="ex">
+                <div>
+                  <p class="ex__name">Barbell incline press</p>
+                  <p class="ex__meta">2 sets × 6–8 reps</p>
+                </div>
+              </div>
+              <div class="sets" role="group" aria-label="Today's sets">
+                <div class="sets__head"><span></span><span>Weight · lb</span><span>Reps</span></div>
+                <div class="setrow">
+                  <span class="setrow__n">1</span>
+                  <div class="stepper" data-field="weight">
+                    <button type="button" data-d="-1" aria-label="Less weight">−</button>
+                    <input id="t-weight" inputmode="decimal" value="145" aria-label="Weight for both sets, pounds">
+                    <button type="button" data-d="1" aria-label="More weight">+</button>
+                  </div>
+                  <div class="stepper" data-field="reps1">
+                    <button type="button" data-d="-1" aria-label="One less rep, set 1">−</button>
+                    <input id="t-reps1" inputmode="numeric" value="8" aria-label="Reps, set 1">
+                    <button type="button" data-d="1" aria-label="One more rep, set 1">+</button>
+                  </div>
+                </div>
+                <div class="setrow">
+                  <span class="setrow__n">2</span>
+                  <div class="stepper stepper--ghost" aria-hidden="true"><span></span><output id="t-weight2">145</output><span></span></div>
+                  <div class="stepper" data-field="reps2">
+                    <button type="button" data-d="-1" aria-label="One less rep, set 2">−</button>
+                    <input id="t-reps2" inputmode="numeric" value="8" aria-label="Reps, set 2">
+                    <button type="button" data-d="1" aria-label="One more rep, set 2">+</button>
+                  </div>
+                </div>
+              </div>
+              <p class="sim__ask" id="feel-label">How did it feel? Tap one to finish the workout.</p>
+              <div class="feel" role="group" aria-labelledby="feel-label">
+                <button type="button" data-feel="easy" class="feel--easy">Too easy</button>
+                <button type="button" data-feel="clean" class="feel--clean">Clean</button>
+                <button type="button" data-feel="grindy" class="feel--grindy">Grindy</button>
+                <button type="button" data-feel="broke" class="feel--broke">Form broke</button>
+              </div>
+            </div>
+            <!-- step 2: the next time this workout comes up -->
+            <div class="sim__step" id="sim-next" hidden>
+              <div class="sim__when"><span class="sim__day sim__day--next">Next workout</span><span>W8 · Upper 1</span></div>
+              <div class="ex">
+                <div>
+                  <p class="ex__name">Barbell incline press</p>
+                  <p class="ex__meta" id="n-last">Last time: 145 lb × 8, 7 · Clean</p>
+                </div>
+              </div>
+              <div class="target" aria-live="polite" id="n-target">
+                <p class="target__label">Next target</p>
+                <p class="target__value" id="n-title">Chase Reps</p>
+                <p class="target__detail" id="n-detail"></p>
+                <div class="target__nums">
+                  <div class="target__num"><span>Load</span><b id="n-load">145</b><i id="n-delta"></i></div>
+                  <div class="target__num"><span>Reps</span><b>6–8</b></div>
+                </div>
+                <p class="target__use" id="n-use">Use 145 lb</p>
+              </div>
+              <p class="sim__why" id="n-why"></p>
+              <button type="button" class="btn-sq btn-ink sim__reset" id="sim-reset">Try another</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Personal bests -->
+        <article class="card" aria-labelledby="pb-title">
+          <header class="card__head">
+            <p class="eyebrow">Personal bests</p>
+            <h3 class="card__title" id="pb-title">Beat your best. It tells you.</h3>
+          </header>
+          <div class="app pb" id="pb">
+            <div class="pb__toast" id="pb-toast" role="status" aria-live="polite" hidden><b id="pb-toast-title"></b><span id="pb-toast-detail"></span></div>
+            <div class="pb__bests">
+              <div><span>Heaviest</span><b id="pb-best-w">145 lb</b></div>
+              <div><span>Est. 1-rep max</span><b id="pb-best-e">179</b></div>
+            </div>
+            <div class="pb__log">
+              <div class="stepper" id="pb-w">
+                <button type="button" data-d="-1" aria-label="Less weight">−</button>
+                <input inputmode="decimal" value="145" aria-label="Weight, pounds">
+                <button type="button" data-d="1" aria-label="More weight">+</button>
+              </div>
+              <span class="pb__x" aria-hidden="true">×</span>
+              <div class="stepper" id="pb-r">
+                <button type="button" data-d="-1" aria-label="One less rep">−</button>
+                <input inputmode="numeric" value="8" aria-label="Reps">
+                <button type="button" data-d="1" aria-label="One more rep">+</button>
+              </div>
+            </div>
+            <div class="pb__actions">
+              <button type="button" class="btn-sq btn-ink" id="pb-log">Log set</button>
+              <button type="button" class="btn-sq" id="pb-reset">Reset</button>
+            </div>
+            <div class="pb__chart">
+              <div class="pb__charthead">
+                <span>Barbell incline press <em class="pro">Pro</em></span>
+                <div class="seg" role="radiogroup" aria-label="Chart">
+                  <button type="button" role="radio" aria-checked="true" data-metric="top">Top weight</button>
+                  <button type="button" role="radio" aria-checked="false" data-metric="e1rm">E1RM</button>
+                  <button type="button" role="radio" aria-checked="false" data-metric="vol">Volume</button>
+                </div>
+              </div>
+              <svg class="chart" id="pb-chart" viewBox="0 0 320 150" role="img" aria-label="Chart of your sessions"></svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. 3D lift -->
+        <article class="card" aria-labelledby="d-title">
+          <header class="card__head">
+            <p class="eyebrow">3D demos</p>
+            <h3 class="card__title" id="d-title">Every lift in 3D. Spin it.</h3>
+          </header>
+          <div class="app">
+            <div class="lift" id="lift" tabindex="0" role="slider" aria-label="Rotate the barbell incline press" aria-valuemin="0" aria-valuemax="23" aria-valuenow="0" aria-valuetext="Three-quarter view">
+              <img id="lift-img" src="assets/3d/dark/r00.webp" alt="3D figure doing a barbell incline press" draggable="false" width="620" height="560">
+              <span class="lift__hint">Drag to rotate</span>
+            </div>
+            <div class="seg seg--full" role="group" aria-label="Camera">
+              <button type="button" data-frame="2">Side</button>
+              <button type="button" data-frame="0" aria-pressed="true">3/4</button>
+              <button type="button" data-frame="21">Front</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Muscle focus -->
+        <article class="card" aria-labelledby="f-title">
+          <header class="card__head">
+            <p class="eyebrow">Muscle focus · Pro</p>
+            <h3 class="card__title" id="f-title">Pick a muscle. Nothing gets skipped.</h3>
+          </header>
+          <div class="app">
+            <div class="chips" role="group" aria-label="Muscles to grow, pick up to two" id="f-chips"></div>
+            <div class="seg seg--full" role="radiogroup" aria-label="Session length">
+              <button type="button" role="radio" aria-checked="true" data-mode="same">Same session length</button>
+              <button type="button" role="radio" aria-checked="false" data-mode="top">Add on top</button>
+            </div>
+            <div class="vol" id="f-bars" aria-live="polite"></div>
+            <p class="plates__fine" id="f-fine">Sets a week, Apex 5 example. The tick is maintenance.</p>
+          </div>
+        </article>
+
+        <!-- 5. Programs -->
+        <article class="card" aria-labelledby="pg-title">
+          <header class="card__head">
+            <p class="eyebrow">Programs</p>
+            <h3 class="card__title" id="pg-title">Pick a program. It runs the weeks.</h3>
+          </header>
+          <div class="app prog">
+            <div class="prog__feat" id="pg-feat" aria-live="polite"></div>
+            <button type="button" class="prog__toggle" id="pg-toggle" aria-expanded="false" aria-controls="pg-list">
+              <span id="pg-count">All 15 programs</span><span class="prog__chev" aria-hidden="true">▾</span>
+            </button>
+            <ul class="prog__list" id="pg-list" hidden></ul>
+          </div>
+        </article>
+
+        <!-- 6. Rest timer -->
+        <article class="card card--full" id="rest-card" aria-labelledby="r-title">
+          <div class="rest-wrap">
+            <div class="rest-copy">
+              <header class="card__head">
+                <p class="eyebrow">Rest timer</p>
+                <h3 class="card__title" id="r-title">Rest sets itself.</h3>
+              </header>
+              <p class="rest-copy__p">BrutalMaxer picks each rest from the lift and its reps. Heavy sets get more, warm-ups get less. It starts when you log a set and alerts you when it's time. Change any of them in Settings. Pro adds a live countdown on the lock screen.</p>
+              <div class="restkind" role="radiogroup" aria-label="Kind of set" id="r-kinds">
+                <button type="button" role="radio" aria-checked="false" data-sec="180" data-name="Heavy" data-ex="Barbell back squat · 3–5 reps"><b>Heavy</b><span>6 reps or fewer</span><i>3:00</i></button>
+                <button type="button" role="radio" aria-checked="true" data-sec="150" data-name="Compound" data-ex="Barbell incline press · 6–8 reps"><b>Compound</b><span>Presses, rows, squats</span><i>2:30</i></button>
+                <button type="button" role="radio" aria-checked="false" data-sec="90" data-name="Isolation" data-ex="Cable lateral raise · 10–12 reps"><b>Isolation</b><span>Curls, raises, flys</span><i>1:30</i></button>
+                <button type="button" role="radio" aria-checked="false" data-sec="45" data-name="Warm-up" data-ex="Barbell incline press · warm-up"><b>Warm-up</b><span>Before working sets</span><i>0:45</i></button>
+              </div>
+            </div>
+            <div class="app rest" id="rest">
+              <div class="rest__top">
+                <span class="rest__kind" id="r-kind">Compound rest</span>
+                <span class="rest__detail" id="r-detail">Barbell incline press · 6–8 reps</span>
+              </div>
+              <svg class="dial" viewBox="0 0 120 120" aria-hidden="true">
+                <rect class="dial__crown" x="52" y="2" width="16" height="9"/>
+                <circle class="dial__face" cx="60" cy="66" r="48"/>
+                <path class="dial__wedge" id="r-wedge" d=""/>
+                <g class="dial__ticks" id="r-ticks"></g>
+                <line class="dial__hand" id="r-hand" x1="60" y1="66" x2="60" y2="30"/>
+                <circle class="dial__hub" cx="60" cy="66" r="5"/>
+              </svg>
+              <div class="rest__row">
+                <span class="rest__time" id="r-time" aria-live="off">2:30</span>
+                <button type="button" class="btn-sq" id="r-minus" aria-label="Subtract 15 seconds">−15</button>
+                <button type="button" class="btn-sq" id="r-plus" aria-label="Add 15 seconds">+15</button>
+                <button type="button" class="btn-sq btn-ink" id="r-go">Start</button>
+              </div>
+              <p class="sr-only" id="r-status" aria-live="polite"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOUR VIDEO -->
+  <section class="tour" id="tour" aria-labelledby="tour-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="tour-title" data-flash>The 37-second tour</h2>
+        <p class="sec-note">Program, target, log, feel, rest, 3D, focus, progress.</p>
+      </div>
+      <div class="tour__frame">
+        <video id="tour-video" src="assets/promo.mp4" poster="assets/promo-poster.jpg" controls playsinline preload="none"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="pricing-title" data-flash>Free to lift. Pro once.</h2>
+        <p class="sec-note">No subscription. Pay once, keep it.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <p class="eyebrow">Free</p>
+          <p class="plan__price">$0</p>
+          <ul class="plan__list">
+            <li>Week 1 of Apex 5 and Chest Hypertrophy</li>
+            <li>Custom programs up to one week</li>
+            <li>Every logging tool, next targets and plate math</li>
+            <li>Rest timer with alerts</li>
+            <li>3D demos for every exercise</li>
+            <li>Progress calendar, PRs, bodyweight and daily backups</li>
+          </ul>
+        </article>
+        <article class="plan plan--pro">
+          <p class="eyebrow">Pro · one-time</p>
+          <p class="plan__price"><span data-price-now>$2.99</span> <s data-price-was>$5.99</s> <span class="tag" data-launch-tag>Launch price</span></p>
+          <ul class="plan__list">
+            <li>Every program, every week</li>
+            <li>Muscle focus and the program builder</li>
+            <li>Unlimited custom programs and supersets</li>
+            <li>Share programs as a file</li>
+            <li>Lock-screen rest countdown</li>
+            <li>Sets per muscle and exercise charts</li>
+            <li>Apple Health / Health Connect</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="privacy" aria-labelledby="privacy-title">
+    <div class="wrap privacy__in">
+      <h2 class="privacy__title" id="privacy-title">Your workouts stay on your phone.</h2>
+      <ul class="privacy__facts">
+        <li>No account</li>
+        <li>No ads</li>
+        <li>No tracking</li>
+      </ul>
+      <a class="privacy__link" href="privacy.html">Read the privacy policy</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__brand">BRUTALMAXER</p>
+    <p class="foot__by">Made by Kyle Parsons · Motion Potion</p>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <p class="foot__mail">Questions: <span class="select">kyle@motionpotion.studio</span></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
