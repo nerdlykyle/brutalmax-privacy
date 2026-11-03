@@ -129,9 +129,10 @@ button { cursor: pointer; }
 .phone video { width: 100%; height: 100%; object-fit: cover; }
 .phone.is-3d { z-index: 3; border-color: transparent; background: transparent; box-shadow: none; touch-action: pan-y pinch-zoom; cursor: grab; outline-offset: 6px; }
 .hero.is-grabbing .phone.is-3d, .hero.is-grabbing .phone__canvas { cursor: grabbing; }
-.phone.is-3d video { opacity: 0; pointer-events: none; }
+/* 1%, not 0: some browsers (Opera) pause a video they consider invisible */
+.phone.is-3d video { opacity: .01; pointer-events: none; }
 .phone.is-pending { border-color: transparent; background: transparent; box-shadow: none; }
-.phone.is-pending video { opacity: 0; }
+.phone.is-pending video { opacity: .01; }
 /* the canvas spans the whole hero so a zoomed phone can fill it; at 1x it lets clicks through */
 .phone__canvas { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; z-index: 2; pointer-events: none; }
 .hero.phone-zoomed .phone__canvas { pointer-events: auto; touch-action: none; cursor: grab; }
