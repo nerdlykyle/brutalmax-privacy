@@ -71,7 +71,9 @@
     })();
     var paint = function () {
       dbg.textContent = navigator.userAgent + '\n' + info + '\nsaveData: ' + !!(navigator.connection && navigator.connection.saveData) +
-        ' · coarse: ' + (window.matchMedia && matchMedia('(pointer: coarse)').matches) + '\n---\n' + window.__bm3dLog.join('\n');
+        ' · coarse: ' + (window.matchMedia && matchMedia('(pointer: coarse)').matches) +
+        (function () { var v = document.getElementById('hero-video'); return v ? '\nhero video: ' + (v.paused ? 'paused' : 'playing') + ' · ready ' + v.readyState + ' · t ' + v.currentTime.toFixed(1) + 's' + (v.error ? ' · error ' + v.error.code : '') : ''; })() +
+        '\n---\n' + window.__bm3dLog.join('\n');
     };
     document.body.appendChild(dbg); paint(); setInterval(paint, 1000);
   }
