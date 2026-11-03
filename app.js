@@ -53,6 +53,29 @@
   });
   if (reduceMotion) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); heroVideo.preload = 'auto'; }
 
+  // ---------- ?debug3d: show what the 3D did, on screen (for testing on phones) ----------
+  if (/[?&]debug3d\b/.test(location.search)) {
+    window.__bm3dLog = window.__bm3dLog || [];
+    window.addEventListener('error', function (e) { window.__bm3dLog.push('error: ' + e.message); });
+    var dbg = document.createElement('pre');
+    dbg.style.cssText = 'position:fixed;left:8px;right:8px;bottom:8px;z-index:99;max-height:45vh;overflow:auto;margin:0;padding:10px;background:#000;color:#62F167;font:11px/1.4 monospace;white-space:pre-wrap;border:2px solid #62F167';
+    var info = (function () {
+      try {
+        var c = document.createElement('canvas'), gl = c.getContext('webgl2');
+        if (!gl) return 'WebGL2: no';
+        var ext = gl.getExtension('WEBGL_debug_renderer_info');
+        return 'WebGL2: yes\nGPU: ' + (ext ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)) +
+          '\nTex units: ' + gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS) + ' · frag uniforms: ' + gl.getParameter(gl.MAX_FRAGMENT_UNIFORM_VECTORS) +
+          '\nPrecision hi: ' + gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT).precision;
+      } catch (e) { return 'WebGL probe threw: ' + e.message; }
+    })();
+    var paint = function () {
+      dbg.textContent = navigator.userAgent + '\n' + info + '\nsaveData: ' + !!(navigator.connection && navigator.connection.saveData) +
+        ' · coarse: ' + (window.matchMedia && matchMedia('(pointer: coarse)').matches) + '\n---\n' + window.__bm3dLog.join('\n');
+    };
+    document.body.appendChild(dbg); paint(); setInterval(paint, 1000);
+  }
+
   // ---------- shared 3D bundle (three.js + the app's demo engine), loaded once, on demand ----------
   var can3D = (function () {
     var conn = navigator.connection || {}, gl = false;
@@ -567,6 +590,8 @@
         // loop at the app's own tempo (lift 1 count, lower 3); a slow turn until someone drags it
         var v = BM3D.createDemoViewer(holder, { exerciseId: DEMO_ID, mode: 'loop', interactive: true, autoSpin: 0.2 });
         if (!v) { holder.remove(); return; }
+        // if this browser/GPU draws nothing, keep the baked frames
+        if (v.selfTest && !v.selfTest()) { v.dispose(); holder.remove(); return; }
         live = { v: v, BM3D: BM3D };
         clearInterval(idle); idle = null;
         box.classList.add('is-live');
