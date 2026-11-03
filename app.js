@@ -108,7 +108,7 @@
     if (!bundle3D) bundle3D = new Promise(function (resolve, reject) {
       if (window.BM3D) return resolve(window.BM3D);
       var sc = document.createElement('script');
-      sc.src = 'assets/site3d.js?v=d88c0da4';
+      sc.src = 'assets/site3d.js?v=0a5f6077';
       sc.onload = function () { window.BM3D ? resolve(window.BM3D) : reject(new Error('no BM3D')); };
       sc.onerror = reject;
       document.body.appendChild(sc);
