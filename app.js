@@ -52,6 +52,24 @@
     soundBtn.textContent = on ? 'Sound off' : 'Sound on';
   });
   if (reduceMotion) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); heroVideo.preload = 'auto'; }
+  // Browsers that refuse autoplay (Opera on Android) need one tap: say so under the phone.
+  (function () {
+    var fig = $('#hero-phone'), hint = $('.phone__hint');
+    if (!fig || !hint) return;
+    var normal = null;
+    heroVideo.addEventListener('bm-blocked', function () {
+      if (fig.classList.contains('needs-tap')) return;
+      normal = hint.textContent;
+      fig.classList.add('needs-tap');
+      hint.textContent = 'Tap to play';
+    });
+    heroVideo.addEventListener('playing', function () {
+      if (!fig.classList.contains('needs-tap')) return;
+      fig.classList.remove('needs-tap');
+      if (normal) hint.textContent = normal;
+    });
+    fig.addEventListener('click', function () { if (heroVideo.paused) heroVideo.play().catch(function () {}); });
+  })();
 
   // ---------- ?debug3d: show what the 3D did, on screen (for testing on phones) ----------
   if (/[?&]debug3d\b/.test(location.search)) {
@@ -90,7 +108,7 @@
     if (!bundle3D) bundle3D = new Promise(function (resolve, reject) {
       if (window.BM3D) return resolve(window.BM3D);
       var sc = document.createElement('script');
-      sc.src = 'assets/site3d.js?v=573e0a17';
+      sc.src = 'assets/site3d.js?v=d88c0da4';
       sc.onload = function () { window.BM3D ? resolve(window.BM3D) : reject(new Error('no BM3D')); };
       sc.onerror = reject;
       document.body.appendChild(sc);
