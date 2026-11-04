@@ -98,17 +98,18 @@
 
   // ---------- shared 3D bundle (three.js + the app's demo engine), loaded once, on demand ----------
   var can3D = (function () {
-    var conn = navigator.connection || {}, gl = false;
+    var gl = false;
     try { var c = document.createElement('canvas'); gl = !!(window.WebGL2RenderingContext && c.getContext('webgl2')); } catch (e) {}
-    // Reduced motion still gets 3D (it only moves when dragged); data saver and weak devices don't.
-    return gl && !conn.saveData && !(navigator.deviceMemory && navigator.deviceMemory < 2);
+    // Everyone with WebGL2 gets 3D (reduced motion too: it only moves when dragged), except phones
+    // with under 2 GB of memory. Data Saver doesn't opt out: the hero video is bigger than the model.
+    return gl && !(navigator.deviceMemory && navigator.deviceMemory < 2);
   })();
   var bundle3D = null;
   function load3D() {
     if (!bundle3D) bundle3D = new Promise(function (resolve, reject) {
       if (window.BM3D) return resolve(window.BM3D);
       var sc = document.createElement('script');
-      sc.src = 'assets/site3d.js?v=0a5f6077';
+      sc.src = 'assets/site3d.js?v=9c8c111a';
       sc.onload = function () { window.BM3D ? resolve(window.BM3D) : reject(new Error('no BM3D')); };
       sc.onerror = reject;
       document.body.appendChild(sc);
@@ -147,7 +148,10 @@
             fig.setAttribute('role', 'group');
             fig.setAttribute('aria-label', '3D iPhone playing the BrutalMaxer tour. Drag or use the arrow keys to turn it; pinch, or press plus and minus, to zoom; zero resets.');
           },
-          onError: flat
+          onError: flat,
+          // the browser dropped WebGL (backgrounded, low memory): flat video until it's restored
+          onLost: function () { fig.classList.remove('is-3d'); },
+          onRestored: function () { fig.classList.add('is-3d'); }
         });
       }).catch(function (e) { console.warn('[BrutalMaxer 3D]', e); flat(); });
     }
